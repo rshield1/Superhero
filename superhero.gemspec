@@ -3,8 +3,8 @@ $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
 require "pokemon/version"
 
 Gem::Specification.new do |spec|
-  spec.name          = "pokemon"
-  spec.version       = Pokemon::VERSION
+  spec.name          = "superhero"
+  spec.version       = Superhero::VERSION
   spec.authors       = ["TODO: Write your name"]
   spec.email         = ["TODO: Write your email address"]
 

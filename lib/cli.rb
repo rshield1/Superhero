@@ -24,7 +24,7 @@ def welcome
     puts "Would you like to see the soups, information?"
     input = gets.strip
     if input == "1"
-      puts self.current_pokemon.name
+      puts self.current_superhero.name
       self.menu
     elsif input == "2"
       self.print_abilities
@@ -38,7 +38,7 @@ def welcome
 
   def menu
     puts "To return to the main menu press 1"
-    puts "To return to #{self.current_pokemon.name}'s menu press 2'"
+    puts "To return to #{self.current_superhero.name}'s menu press 2'"
     input = gets.strip
     if input == "1"
       self.welcome
@@ -51,13 +51,12 @@ def welcome
   end
 
   def error
-    puts "There is no pokemon by that name!"
+    puts "There is no Superhero on the list!"
     self.welcome
   end
 
   def print_abilities
-    self.current_pokemon.abilities.each_with_index do |ability, index|
-      puts "#{index+1}. #{ability["ability"]["name"]}"
+
     end
   end
 

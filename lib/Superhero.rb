@@ -23,9 +23,9 @@ class Superhero::Superhero
     @@all
   end
 
-  def self.get_pokemon_by_name(name)
-    self.all.detect do |pokemon|
-      pokemon.name == name
+  def self.get_superhero_by_name(name)
+    self.all.detect do |soup|
+      soup.name == name
     end
   end
 
