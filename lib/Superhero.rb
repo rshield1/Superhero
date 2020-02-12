@@ -1,23 +1,15 @@
 class Superhero::Superhero
 
-  attr_accessor :full_name, :alter_egos, :aliases, :birth, :first_appearance, :publisher, :alignment
+  attr_accessor :name, :id, :bio, :info, :stats, :intelligence
 
   @@all = []
 
-  def initialize(attributes)
-      attributes.each {|key, value|
-        begin
-          self.send(("#{key}="), value)
-          @@all << self
-        rescue NoMethodError
+  #def initialize(attributes)
+    #attributes.each {|k,v| self.send(("#{k}="), v)}
+      #@@all << self
+  #end
 
-        end
-        }
-    end
 
-  def abilities
-    @abilities
-  end
 
   def self.all
     @@all

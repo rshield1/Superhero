@@ -10,12 +10,14 @@ def welcome
     puts "Please enter a superhero by number"
     input = gets.strip
     @id = input 
-    get_superhero(@id)
+    get_superhero(id)
   end
 
 
   def get_superhero(id)
       @current_superhero = Superhero::API.new.get_superhero(id)
+      Superhero::Superhero.new(@current_superhero)
+      binding.pry
   end
 
   
@@ -57,7 +59,7 @@ def welcome
 
   def print_abilities
 
-    end
+  
   end
 
   def superhero_names
@@ -797,4 +799,5 @@ def welcome
     731	Zoom"
 
   end
+
 end
